@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bodoni+Moda&family=EB+Garamond&family=Josefin+Sans&family=Libre+Baskerville&family=Maven+Pro&family=Montserrat&family=Noto+Serif&family=Roboto&family=Ubuntu&family=Work+Sans&display=swap');
+
+.editable {
+    outline: 3px solid green;
+    cursor: text;
+    user-select: auto;
+}
+.editable:hover {
+    outline: 3px solid green;
+}
+.text {
+    position: absolute;
+    top: 10vh;
+    left: 25vw;
+    font-size: 100%;
+
+}
+
+.intText {
+    overflow: hidden;
+}
+
+.toolbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    min-height: 35px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 1px 8px rgb(63, 63, 63, 0.3);
+    z-index: 2900;
+}
+
+.textEdit {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    visibility: collapse;
+    width: 100%;
+    height: 100%;
+}
+
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.separate {
+    height: 80%;
+    width: 1px;
+    background-color: rgba(15, 15, 15, 1);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.textEdit select {
+    background: none;
+    border: none;
+    border-radius: 5px;
+    padding-left: 5px;
+    height: 90%;
+    transition: background-color .2s;
+}
+.textEdit select:hover {
+    background-color: rgba(15, 15, 15, 0.18);
+}
+.textEdit select option{
+    background-color: white;
+    border: none;
+}
+
+.i-color {
+    background: none;
+    border: none;
+    width: 30px;
+    border-radius: 5px;
+}
+.i-color:hover {
+    background-color: rgba(15, 15, 15, 0.18);
+}
+
+.selectAlignText option[value="a-left"] {
+    /* background-color:/ red; */
+    width: 30px;
+    height: 10px;
+}
+
+.moreEdit {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    visibility: collapse;
+    position: relative;
+    right: 0;
+    padding-right: 5px;
+}
+
+.moreEdit .icones {
+    border-radius: 5px;
+    transition: background-color .2s;
+}
+.moreEdit .icones:hover {
+    background-color: rgba(15, 15, 15, 0.18);
+}
+
+.delete-btn {
+    width: 20px;
+    padding: 5px;
+}
+
+.forward-btn {
+    width: 15px;
+    padding: 8px;
+}
+
+.backward-btn {
+    width: 15px;
+    padding: 8px;
+}
+
+.paintBack {
+    padding: 8px;
+}

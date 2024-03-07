@@ -1,0 +1,121 @@
+.movable {
+    position: absolute;
+    z-index: 2;
+    user-select: none;
+    transition: outline .1s;
+}
+.movable:hover {
+    outline: 3px solid #357df9;
+}
+
+.selected {
+    outline: 3px solid red;
+    cursor: move;
+    transition: outline .1s;
+}
+.selected:hover {
+    outline: 3px solid red;
+}
+
+.resizer {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 1px;
+    background-color: whitesmoke;
+    outline: 1px solid red;
+    z-index: 2;
+}
+
+.resizer.nw {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+}
+
+.resizer.ne {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+}
+
+.resizer.sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+}
+
+.resizer.se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+}
+
+.gridCont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* height: 100%; */
+    width: 100%;
+    visibility: hidden;
+}
+
+.grid {
+    /* outline: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* z-index: 1; */
+}
+
+.gridInt {
+    background-color: rgba(0, 0, 0, 0.08);
+    width: 70%;
+    height: 70%;
+}
+
+.zoneSelect {
+    position: absolute;
+    outline: 3px solid #357df9;
+    z-index: 1;
+}
+
+.inMove {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.img {
+    width: 20vw;
+    height: 20vh;
+}
+
+.gridLine {
+    padding: 0;
+    margin: 0;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow: hidden;
+}
+
+.page {
+    position: relative;
+    z-index: 0;
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,9 @@
+Cas d'ut :
+actions qu'on peut effectuer n'imporrte où
+
+créer des fonctions 
+créer une image
+modifier une interface
+
+Template 1 -> Création du template de base
+Zone de texte modifable -> Modifier une zone de texte

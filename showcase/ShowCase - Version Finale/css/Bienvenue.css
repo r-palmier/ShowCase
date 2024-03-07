@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+.titre{
+   
+    display: flex;
+    flex-direction: column;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 47%;
+    background-color:  rgb(40, 59, 59);
+}
+
+body{
+    background-image: url("background.jpg");
+    background-size: cover;
+}
+
+.connexion, .inscription {
+    border: solid;
+    border-color: #14b39b;
+    height: 30%;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+
+}
+
+.sous-titre{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 2em;
+    padding-left: 39%;
+    padding-top: 1%;
+    padding-bottom: 2.5%;
+    color: #18c9ae;
+
+}
+
+.nom, .mdp, .connecter{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding-left: 35%;
+    padding-bottom: 5%;
+    color: #18c9ae;
+    font-size: 1.5em;
+}

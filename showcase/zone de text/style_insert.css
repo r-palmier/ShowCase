@@ -1,0 +1,104 @@
+.editable {
+    outline: 3px solid green;
+    cursor: text;
+}
+.editable:hover {
+    outline: 3px solid green;
+}
+.text {
+    overflow: hidden;
+    position: absolute;
+    top: 5em;
+  right: 35em;
+}
+
+.btn{
+
+    position: absolute;
+    left : 40%;
+}
+
+.boutton{
+    width  : 7vw;
+    height : 7vw;
+    left : 60%;
+    background-color: grey;
+    padding: 0 ;
+    margin: 0 ;
+}
+
+
+
+.exemple {
+    width  : 20vw;
+    height : 20vw;
+    background : green;
+  }
+
+.cercle{
+    width : 50vw;
+    height : 40vh;
+    background : green;
+    border-radius : 25px; 
+  }
+.carre {
+    width  : 50vw;
+    height : 50vw;
+    background : green;
+  }
+
+  .ligne {
+    width  : 100%;
+    height : 0.5vw;
+    background : green;
+  }
+
+
+
+  .rectangle {
+    width  : 50vw;
+    height : 25vh;
+    background : green;
+  }
+
+
+
+  .trapeze{
+    border-bottom: 40vh solid green;
+    border-left  : 15vw solid transparent; 
+    border-right : 15vw solid transparent;
+    height : 0;
+    width  : 40vw;
+  }
+  .triangle-haut{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-right : 19vw solid transparent;
+    border-bottom : 26vh solid red;
+    border-left : 19vw solid transparent;
+   }
+   .triangle-bas{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 26vh solid red;
+    border-right : 19vw solid transparent;
+    border-left : 19vw solid transparent;
+   }
+   .triangle-droit{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 15vh solid transparent;
+    border-bottom : 20vw solid transparent;
+    border-left : 32vw solid red;
+   }
+   .triangle-gauche{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 15vh solid transparent;
+    border-right : 33vw solid red;
+    border-bottom : 15vh solid transparent;
+   }

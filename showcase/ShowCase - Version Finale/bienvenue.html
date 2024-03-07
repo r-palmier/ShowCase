@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Bienvenue</title>
+    <link rel="stylesheet" type="text/css"  href="./css/Bienvenue.css">
+
+</head>
+
+<body>
+    <main>
+        <section 
+            <div>
+                <img class="logo" src="logo.svg" alt="logo" draggable="false">
+            </div>
+
+        </section>
+        <section class="connexion">
+            <div class="sous-titre">
+                Connexion
+            </div>
+            <form class="formulaire" action="connection.php" method="post">
+                <div class= "nom">
+                    <label for="name">nom :</label>
+                    <input type="text" id="name" name="pseudo">
+                </div>
+                <div class ="mdp">
+                    <label for="password">mot de passe :</label>
+                    <input type="text" id="password" name="mdp_user">
+                </div>
+                <div class="button connecter">
+                    <button type="submit">se connecter</button>
+                </div>
+            </form>
+        </section>
+        <section class="inscription">
+            <div class="sous-titre">
+                Inscription
+            </div>
+            <form action="inscription.php" method="post">
+                <div class="nom">
+                    <label for="name">nom :</label>
+                    <input type="text" id="name" name="pseudo">
+                </div >
+                <div class="mdp">
+                    <label for="password">mot de passe :</label>
+                    <input type="text" id="password" name="mdp_user">
+                </div>
+                <div class="button connecter">
+
+                    <button type="submit">s'enregistrer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+
+
+
+
+
+
+</html>

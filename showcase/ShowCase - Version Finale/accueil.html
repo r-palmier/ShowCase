@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ShowCase</title>
+
+    <!-- Icones -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./Css/style_outil.css">
+    <link rel="stylesheet" href="./Css/styleDD.css">
+    <link rel="stylesheet" href="./Css/style_text.css">
+    <link rel="stylesheet" href="./Css/style_section.css">
+    <link rel="stylesheet" href="./Css/style_insert.css">
+
+    <!-- FavIcon -->
+    <link rel="icon" href="./srcs/icontop.png">
+    
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <img class="logo" src="./srcs/logo_showcase.png" alt="logo" draggable="false">
+        <div id="header_droite">
+            <button id="btn_save" class="bouton style_bouton1 vert_bouton">Sauvegarder</button>
+            <div id="div_account_menu">
+                <i id="account_icon" class='bx bxs-user-account' class="icon"></i>
+                <ul class="top_menu">
+                    <li class="sous_li"><a href="#">Compte</a></li>
+                    <li class="sous_li"><a href="#">Sites</a></li>
+                    <li class="sous_li"><a href="#">Déconnexion</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="sidebar_contenu">
+        <div id="sidebar">
+            <ul id="side_list">
+
+                <li class="side_li">
+                    <i class='bx bx-grid-alt elements-icon'></i>
+                    <ul class="side_menu">
+                        <h4 class="titre_side_menu">Elements</h4>
+
+                        <li class="sous_li addElems addTexte" value="text">
+                            <i class='bx bx-text'></i>Texte
+                        </li>
+
+                        <label class="sous_li addElems addImage" value="image">
+                            <form class="hide" id="formAddImg">
+                                <input name="fileI" type="file" accept="image/*" onchange="loadFile(event)">
+                            </form>
+                            <i class='bx bx-image'></i>Image
+                        </label>
+
+                        <li class="sous_li addElems addFormes" value="forme">
+                            <i class='bx bx-checkbox'></i>Formes
+                            <div class="formesChoice hide" id="menuFormes">
+
+                                <div class="formesListed">
+                                    <div class="ligne"></div>
+                                </div>
+                                <div class="formesListed" style="height: 50px;">
+                                    <div class="rectangle"></div>
+                                </div>
+                                <div class="formesListed">
+                                    <div class="trapeze"></div>
+                                </div>
+
+                                <div class="formesListed menu-triangle">
+                                    <div class="triangle-haut"></div>
+
+                                    <div class="formesChoice hide" id="menuTriangle">
+                                        <div class="formesListed">
+                                            <div class="triangle-haut triangles"></div>
+                                        </div>
+                                        <div class="formesListed">
+                                            <div class="triangle-bas triangles"></div>
+                                        </div>
+                                        <div class="formesListed">
+                                            <div class="triangle-gauche triangles"></div>
+                                        </div>
+                                        <div class="formesListed">
+                                            <div class="triangle-droit triangles"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </li>
+                        <li class="sous_li addElems addBtns" value="button">
+                            <i class='bx bx-clipboard'></i>Bouton
+                        </li> 
+
+                    </ul>
+                </li>
+
+                <li class="side_li">
+                    <i class='bx bx-paint elements-icon'></i>
+                    <ul class="side_menu">
+                        <h4 class="titre_side_menu">Style</h4>
+                        <li class="sous_li" id="couleur"><a href="#">Couleurs</a>
+                            <ul class="sous_ul">
+                                <li class="li_3"><button class="style_bouton1 vert_bouton" id="couleur1">palette 1</button></li>
+                                <li class="li_3"><button class="style_bouton1 vert_bouton" id="couleur2">palette 2</button></li>
+                                <li class="li_3"><button class="style_bouton1 vert_bouton" id="couleur3">palette 3</button></li>
+                            </ul>
+                        </li>
+                        <li class="sous_li" id="style_bouton"><a href="#">Bouton</a>
+                            <ul class="sous_ul">
+                                <li class="li_3"><button class="style_bouton1 vert_bouton" id="btn_style1">bouton</button></li>
+                                <li class="li_3"><button class="style_bouton2 vert_bouton" id="btn_style2">bouton</button></li>
+                                <li class="li_3"><button class="style_bouton3 vert_bouton" id="btn_style3">bouton</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <div class="toolbar">
+                <div class="tools">
+                    <div class="textEdit">
+                        <select class="selectFontSize" title="Taille de Police">
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                            <option value="32">32</option>
+                        </select>
+                        <span class="separate"></span>
+
+                        <select class="selectPolice" title="Police">
+                            <option style="font-family: 'Arial', cursive;" value="Arial">Arial</option>
+                            <option style="font-family: 'Bebas Neue', cursive;" value="Bebas Neue">Bebas Neue</option>
+                            <option style="font-family: 'Bodoni Moda', serif;" value="Bodoni Moda">Bodoni Moda</option>
+                            <option style="font-family: 'EB Garamond', serif;" value="EB Garamond">EB Garamond</option>
+                            <option style="font-family: 'Comic Sans MS', serif;" value="Comic Sans MS">Comic Sans MS</option>
+                            <option style="font-family: 'Josefin Sans', sans-serif;" value="Josefin Sans">Josefin Sans</option>
+                            <option style="font-family: 'Libre Baskerville', serif;" value="Libre Baskerville">Libre Baskerville</option>
+                            <option style="font-family: 'Maven Pro', sans-serif;" value="Maven Pro">Maven Pro</option>
+                            <option style="font-family: 'Montserrat', sans-serif;" value="Montserrat">Montserrat</option>
+                            <option style="font-family: 'Noto Serif', serif;" value="Noto Serif">Noto Serif</option>
+                            <option style="font-family: 'Roboto', sans-serif;" value="Roboto">Roboto</option>
+                            <option style="font-family: 'Ubuntu', sans-serif;" value="Ubuntu">Ubuntu</option>
+                            <option style="font-family: 'Work Sans', sans-serif;" value="Work Sans">Work Sans</option>
+                        </select>
+                        <span class="separate"></span>
+
+                        A<input type="color" class="i-color" title="Couleur du texte">
+                        <span class="separate"></span>
+
+                        <select class="selectAlignText" style="font-family:Arial, FontAwesome;" title="Alignement du texte">
+                            <option value="a-left">Gauche</option>
+                            <option value="a-center">Centre</option>
+                            <option value="a-right">Droite</option>
+                            <option value="a-justify">Justifié</option>
+                        </select>
+                    </div>                  
+                </div>
+                <div class="moreEdit"> 
+                    <div class="separate"></div>
+                    <label class="icones paintBack">
+                        <i class='bx bxs-brush' title="Couleur de fond"></i>
+                        <input type="color" class="hide colorBack">
+                    </label>
+                    <img title="Avancer" src="./srcs/fleche-haut-gauche.png" class="icones forward-btn">
+                    <img title="Reculer" src="./srcs/fleche-bas-droite.png" class="icones backward-btn">
+                    <img title="Supprimer" src="./srcs/poubelle.png" class="icones delete-btn">
+                </div>
+            
+            </div>
+            <div class="page">
+                
+                <div class="section element" id="s0" style="height: 1400px;">
+                    <div id="0" class="text movable" style="position: absolute; font-size: 32px; font-family: titre, sans-serif; color: rgb(140, 108, 145); height: fit-content; left: 20%; top: 100px; width: 60%; text-align: center; z-index: 1000;"> 
+                        <p>
+                            TEXTE AU MILIEU ET IMAGES SUR LES COTES
+                        </p>
+                    </div>
+                
+                    <div id="1" class="movable seashell bandeau element" style="position: absolute; left: 0%; top: 50px; width: 100%; height: 250px; z-index: 999;"></div>
+                    
+                    <div id="2" class="movable img element" style="position: absolute; background: crimson url(./Images/reoz.png) center / cover; top: 400px; height: 950px; left: 0%; width: 20%; z-index: 1000;"></div>
+                    
+                    <div id="3" class="movable img element" style="position: absolute; background: royalblue url(./Images/koku.png) center / cover; top: 400px; height: 950px; left: 80%; width: 20%; z-index: 1000;"></div>
+                    
+                    <div id="4" class="text movable element" style="position: absolute; top: 450px; left: 30%; width: 40%; text-align: justify; font-size: 1rem; font-family: texte, sans-serif; line-height: 1.5rem; color: rgb(140, 108, 145); height: fit-content; z-index: 1000;"> 
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, aliquam. Commodi, veniam? Sunt nam eligendi cum, aliquid exercitationem laboriosam dicta ducimus, sint quisquam ea voluptas veniam necessitatibus asperiores consequuntur incidunt eaque labore praesentium nihil illo perspiciatis aliquam provident. Officia odio aspernatur facere fugiat? Repellendus veniam ex tempora. Sed sapiente recusandae, labore velit eos veritatis dolorum rerum repudiandae adipisci tempore accusantium quia ea soluta quasi minus, temporibus voluptatum illum. Iusto excepturi vitae assumenda labore. Facere excepturi et in consectetur blanditiis fugit cumque dolor deleniti exercitationem dolore reiciendis, necessitatibus error minus illo eaque commodi modi laboriosam tenetur quisquam nisi voluptatum repellendus dolorem.
+                        </p>
+                    </div>
+
+                    <div class="addSection">
+                        <label class="labelAddSection">
+                            + Ajouter une section
+                        </label>
+                        <img src="./srcs/poubelle_white.png" class="delSection" alt="delSec">
+                    </div>
+                    <div class="btnSizeContainer">
+                        <img src="./srcs/arrow_up_white.png" class="arrowSection sectionUp" alt="up">
+                        <img src="./srcs/arrow_down_white.png" class="arrowSection sectionDown" alt="down">
+                    </div>
+                    <div class="chooseAdd hide"></div>
+                    
+                </div>                
+                <div class="section element" id="s1" style="height: 900px;">
+                    <div id="5" class="text movable element" style="position: absolute; font-size: 32px; font-family: titre, sans-serif; color: rgb(140, 108, 145); text-transform: uppercase; height: fit-content; left: 20%; top: 100px; width: 60%; text-align: center; z-index: 999;">
+                        <p>
+                            CHOOSE WHISELY
+                        </p>
+                    </div>
+                    
+                    <div id="6" class="movable bandeau seashell element" style="position: absolute; left: 0%; top: 50px; width: 100%; height: 250px; z-index: 998;"></div>
+                    
+                    
+                    <div id="7" class="movable img element" style="position: absolute; background: goldenrod url(./Images/casu01.png) repeat scroll center center / cover; left: 10%; top: 400px; width: 20%; height: 350px; z-index: 1000;"></div>
+                    
+                    <div id="8" class="movable img element" style="position: absolute; background: skyblue url(./Images/marie.png) repeat scroll center center / cover; left: 40%; top: 400px; width: 20%; height: 350px; z-index: 1000;"></div>
+                    
+                    <div id="9" class="movable img element" style="position: absolute; background: palevioletred url(./Images/alexandar.png) repeat scroll center center / cover; left: 70%; top: 400px; width: 20%; height: 350px; z-index: 1000;"></div>
+                    
+                            
+                    <div id="10" class="text movable element" style="position: absolute; top: 750px; left: 10%; width: 20%; height: fit-content; text-align: center; font-family: titre, sans-serif; color: #8c6c91; z-index: 1000;">Bowser</br><button class="boutton style_bouton1 vert">bowser</button></div>
+                    
+                    <div id="11" class="text movable element" style="position: absolute; top: 750px; left: 40%; width: 20%; height: fit-content; text-align: center; font-family: titre, sans-serif; color: #8c6c91; z-index: 1000;">Amphinobie</br><button class="boutton style_bouton1 vert">Amphinobie</button></div>
+                    
+                    <div id="12" class="text movable element" style="position: absolute; top: 750px; left: 70%; width: 20%; height: fit-content; text-align: center; font-family: titre, sans-serif; color: #8c6c91; z-index: 1000;">Rondoudou</br><button class="boutton style_bouton1 vert">Rondoudou</button></div>
+
+                    <div class="addSection">
+                        <label class="labelAddSection">
+                            + Ajouter une section
+                        </label>
+                        <img src="./srcs/poubelle_white.png" class="delSection" alt="delSec">
+                        </div>
+                        <div class="btnSizeContainer">
+                            <img src="./srcs/arrow_up_white.png" class="arrowSection sectionUp" alt="up">
+                            <img src="./srcs/arrow_down_white.png" class="arrowSection sectionDown" alt="down">
+                        </div>
+                        <div class="chooseAdd hide"></div>
+                    </div> 
+    
+                    
+                    <div class="section element" id="s2" style="height: 150px;">
+                        <div id="13" class="movable text" value="es3" style='position: absolute; color: whitesmoke; width: 100%; height: fit-content; text-align: center; top: 0px; left: 0%;z-index: 1000;'> 
+                            <p>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <p> 
+                                Vero, adipisci maxime? Illo voluptatibus in qui vitae
+                            </p> 
+                            <P>
+                                error obcaecati odio similique quisquam porro aperiam amet deserunt, velit maiores optio hic fugiat.
+                            </P>
+                        </div>
+                        <div class="movable noir element" id="pied" style="position: absolute;top: 0px; left: 0%; width: 100%; height: 150px; z-index: 999;"></div>
+    
+                        <div class="addSection">
+                            <label class="labelAddSection">
+                                + Ajouter une section
+                            </label>
+                            <img src="./srcs/poubelle_white.png" class="delSection" alt="delSec">
+                        </div>
+                        <div class="btnSizeContainer">
+                            <img src="./srcs/arrow_up_white.png" class="arrowSection sectionUp" alt="up">
+                            <img src="./srcs/arrow_down_white.png" class="arrowSection sectionDown" alt="down">
+                        </div>
+                    <div class="chooseAdd hide"></div>
+                </div>
+
+                <div class="endSection">
+                    You are at the bottom of your website, this will not be visible
+                </div>
+                <img classe="img" id="image" name="img"/>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="choiceSectionContainer">
+        <div class="choiceSection">
+            <label class="labelCoiceSect">Choisissez la section que vous souhaitez ajouter</label>
+            <div class="listSection">
+                <div class="sectionListing" value="vide" height="800">
+                    <img class="imgListSection">
+                    <label class="titreListSection">Section vide</label>
+                </div>
+                <div class="sectionListing" value="corps1" height="1400">
+                    <img class="imgListSection" src="./Templates/capture_corps1.png" alt="capt_corps1">
+                    <label class="titreListSection">Corps 1</label>
+                </div>
+                <div class="sectionListing" value="corps2" heigth="900">
+                    <img class="imgListSection" src="./Templates/capture_corps2.png" alt="capt_corps2">
+                    <label class="titreListSection">Corps 2</label>
+                </div>
+                <div class="sectionListing" value="foot1" height="150">
+                    <img class="imgListSection" src="./Templates/capture_foot1.png" alt="capt_foot1">
+                    <label class="titreListSection">Foot 1</label>
+                </div>
+            </div>
+            <img class="closeListSection" src="./srcs/annuler.png">
+        </div>
+    </div>
+
+    <script src="./Scripts/scriptDD.js"></script>
+    <script src="./Scripts/script_text.js"></script>
+    <script src="./Scripts/script_sections.js"></script>
+    <script src="./Scripts/script_insert.js"></script>
+    <script src="./Scripts/script_recuperation2.js"></script>
+    <script src="./Scripts/script_style_bouton.js"></script>
+    <script src="./Scripts/script_couleur.js"></script>
+    <script src="./scripts/script_upload.js"></script>
+    
+
+</body>
+</html>

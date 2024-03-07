@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=tire:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=soustitre:ital,wght@0,600;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=texte:ital,wght@0,100;0,600;1,300&display=swap');
+
+
+
+body{
+    background-color: rgb(252, 250, 252);
+    height: 100vh;
+}
+
+main{
+    
+    margin-bottom: 10vh;
+
+
+}
+
+h1{
+    padding-top: 10vh;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    font-family: 'titre', sans-serif;
+    color: #8c6c91;
+    width: 100vw;
+    height: 20vh;
+    background-color: seashell;
+    margin: 10vh auto;
+
+}
+
+h3{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: 'texte', sans-serif;
+    line-height: 1.5rem;
+    color: #8c6c91;
+    width: 30vw;
+    margin: 0 auto;
+    min-width: 30rem;
+}
+
+h2{
+    
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'soustitre', sans-serif;
+    color: #8c6c91;
+    width: 50vw;
+    margin: 5rem auto 2rem;
+}
+button{
+    position: absolute;
+    top: 150%;
+    left:45%;
+    background-color: #8c6c91 ;
+    border-radius: 15rem;
+    width: 10vw;
+    height: 10vh;
+    color: cornsilk;
+    
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+
+#image_gauche{
+    background: url(image/reoz.png) no-repeat center/cover crimson;
+}
+#image_droite{
+    background: url(image/koku.png) no-repeat center/cover royalblue;
+}
+
+@media screen and (max-width : 500px) {
+    #image_gauche{
+        background: none;
+        
+    }
+    #image_droite{
+        background: none;
+    }
+    
+}
+
+.choose{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+.case, .case_text{
+    margin-left: 30%;
+    font-family: 'texte', sans-serif;
+    color: #8c6c91;
+    border: #8c6c91 solid; 
+    width: 20vw;
+    border-radius: 2.5rem;
+}
+
+.case{
+    
+    height: 20vw;
+    margin-bottom: 0.5vw;
+}
+
+.case_text{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.case_text:hover{
+    background-color: #8c6c91;
+    color: rgb(252, 250, 252);
+}
+
+#bowser{
+    background: url(image/casu01.png) center/cover goldenrod;
+}
+#amphinobie{
+    background: url(image/marie.png) center/cover skyblue;
+}
+#rondoudou{
+    background: url(image/alexandar.png) center/cover palevioletred;
+}
+
+footer{
+    background: rgb(34, 30, 30);
+    color: whitesmoke;
+    width: 100vw;
+    height: 20vh;
+    text-align: left;
+    text-align: center;
+}

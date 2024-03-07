@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="styleDD.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_text.css">
+    
+</head>
+<body>
+    <div class="haut">
+
+    </div>
+    <div class="bas">
+        
+        <div class="sidebar">
+    
+        </div>
+        <div class="content">
+            <div class="toolbar">
+                <div class="tools">
+                    <div class="textEdit">
+                        <select class="selectFontSize" title="Taille de Police">
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="14">14</option>
+                            <option value="16">16</option>
+                            <option value="18">18</option>
+                            <option value="20">20</option>
+                            <option value="24">24</option>
+                            <option value="28">28</option>
+                            <option value="32">32</option>
+                        </select>
+                        <span class="separate"></span>
+
+                        <select class="selectPolice" title="Police">
+                            <option style="font-family: 'Arial', cursive;" value="Arial">Arial</option>
+                            <option style="font-family: 'Bebas Neue', cursive;" value="Bebas Neue">Bebas Neue</option>
+                            <option style="font-family: 'Bodoni Moda', serif;" value="Bodoni Moda">Bodoni Moda</option>
+                            <option style="font-family: 'EB Garamond', serif;" value="EB Garamond">EB Garamond</option>
+                            <option style="font-family: 'Comic Sans MS', serif;" value="Comic Sans MS">Comic Sans MS</option>
+                            <option style="font-family: 'Josefin Sans', sans-serif;" value="Josefin Sans">Josefin Sans</option>
+                            <option style="font-family: 'Libre Baskerville', serif;" value="Libre Baskerville">Libre Baskerville</option>
+                            <option style="font-family: 'Maven Pro', sans-serif;" value="Maven Pro">Maven Pro</option>
+                            <option style="font-family: 'Montserrat', sans-serif;" value="Montserrat">Montserrat</option>
+                            <option style="font-family: 'Noto Serif', serif;" value="Noto Serif">Noto Serif</option>
+                            <option style="font-family: 'Roboto', sans-serif;" value="Roboto">Roboto</option>
+                            <option style="font-family: 'Ubuntu', sans-serif;" value="Ubuntu">Ubuntu</option>
+                            <option style="font-family: 'Work Sans', sans-serif;" value="Work Sans">Work Sans</option>
+                        </select>
+                        <span class="separate"></span>
+
+                        A<input type="color" class="i-color" title="Couleur du texte">
+                        <span class="separate"></span>
+
+                        <select class="selectAlignText" style="font-family:Arial, FontAwesome;" title="Alignement du texte">
+                            <option value="a-left">Gauche</option>
+                            <option value="a-center">Centre</option>
+                            <option value="a-right">Droite</option>
+                            <option value="a-justify">Justifié</option>
+                        </select>
+                        
+                    </div>
+
+                    
+                </div>
+
+                <div class="moreEdit"> 
+                    <div class="separate"></div>
+                    <img title="Avancer" src="./srcs/fleche-haut-gauche.png" class="icones forward-btn">
+                    <img title="Reculer" src="./srcs/fleche-bas-droite.png" class="icones backward-btn">
+                    <img title="Supprimer" src="./srcs/poubelle.png" class="icones delete-btn">
+                </div>
+            
+            </div>
+            <div class="page">
+                <div class="container">
+                    <div class="item movable img" id="img1" style="background: url(StarCitizen.png) center/cover; z-index: 1000;"></div>
+                </div>
+
+                <div class="item2 movable img" id="img2" style="background: url(fond_defaut2.png) center/cover; z-index: 1000;"></div>
+
+                <div class="text movable textetest" id="txt0" style='font-size: 16px; font-family: "Work Sans"; text-align: left; color: #000; z-index: 1000;'>
+                    <p class="intTexte">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt beatae temporibus alias. Necessitatibus quisquam aut similique consequatur esse voluptatum porro tenetur recusandae voluptas harum! Iste commodi eligendi mollitia voluptatum sapiente.
+                    </p>
+                </div>
+                
+                <button class="btn">Spawn</button> 
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="./script_text.js"></script>
+    <script type="text/javascript" src="./scriptDD.js"></script>
+</body>
+</html>
